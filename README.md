@@ -12,6 +12,7 @@ The two components above can be run using command line:
         bash run.sh AND bash run_test_in_docker.py
     b) On linux:
         sh run.sh AND sh run_test_in_docker.py
+        
 The design consideration mostly comes from the requirements of the project, which is Dockerized API, written in Flask that supports large file (5GB+) uploads.
 First of all, I created the API that allows uploading data to the server using Flask. I believe that instead of uploading the whole file at the same time, it is better to upload the file in chunks for big filed like 5GB+. Currently the upload API does not support of uploading 5GB+. The python API is a POST request API that also consists of the front end, where the user can upload their files.
 After running the above command, go to your browser and type "http://localhost:5000/upload", click the "Choose File" button, choose the file to be uploaded and press "Upload".
